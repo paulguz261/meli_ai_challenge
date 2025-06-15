@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: models
+Version: 0.1.0
+Summary: ML model pipeline and tools for predictions
+Author-email: PSG <mail@mail.com>
+Requires-Dist: scikit-learn
+Requires-Dist: joblib
+Requires-Dist: pandas
+Requires-Dist: numpy

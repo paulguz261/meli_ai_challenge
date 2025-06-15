@@ -1,0 +1,26 @@
+# Key Files
+agents/keys.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files and zip archives
+data/*.csv
+data/*.zip
+
+# Trained model exports (you can track the model differently if needed)
+models/exports/
+
+# IDE / Editor configs
+.vscode/
+
+# Python packaging metadata
+pip-wheel-metadata/
+__pypackages__/

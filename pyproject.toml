@@ -1,0 +1,20 @@
+[project]
+name = "models"
+version = "0.1.0"
+description = "ML model pipeline and tools for predictions"
+authors = [
+  { name="PSG", email="mail@mail.com" }
+]
+dependencies = [
+  "scikit-learn",
+  "joblib",
+  "pandas",
+  "numpy"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["models"]
