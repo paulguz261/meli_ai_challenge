@@ -99,6 +99,32 @@ conda env create -f environment.yml
 conda activate meli_ai_env
 ```
 
+## Evidencia Funcionamiento
+
+servicio API arriba
+![Servicio arriba](screenshots/service_up.png)
+en esta imagen se ve que la api ha ejecutado el metodo /analyze de forma exitosa
+
+evidencia de los log de entrada junto con la salida con el analizis de las acciones a realizar.
+   - valores de entrada
+![Servicio arriba](screenshots/api_cyber_ai_input.png)
+   - valores de salida
+![Servicio arriba](screenshots/api_cyber_ai_output.png)
+
+**Analisis de salida**
+
+```json 
+{
+  "decision": "🧠 Overall analysis: Multiple exploit attacks detected, block traffic from suspicious sources.
+
+• Log ID 1: Prediction → 'EXPLOITS', Suggested action → 'BLOCK TRAFFIC FROM SUSPICIOUS SOURCES'
+• Log ID 2: Prediction → 'EXPLOITS', Suggested action → 'BLOCK TRAFFIC FROM SUSPICIOUS SOURCES'
+• Log ID 3: Prediction → 'EXPLOITS', Suggested action → 'BLOCK TRAFFIC FROM SUSPICIOUS SOURCES'
+• Log ID 4: Prediction → 'EXPLOITS', Suggested action → 'BLOCK TRAFFIC FROM SUSPICIOUS SOURCES'
+• Log ID 5: Prediction → 'NORMAL', Suggested action → 'NO ACTION'"
+}
+```
+
 ### 4. Inicia el servidor FastAPI
 ```bash
 uvicorn app.main:app --reload
