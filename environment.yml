@@ -10,6 +10,8 @@ dependencies:
   - langchain
   - uvicorn
   - fastapi
+  - pygraphviz
+  - ipykernel
   - pip:
     - langgraph
     - langchain-openai
