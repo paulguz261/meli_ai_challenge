@@ -83,18 +83,21 @@ git clone https://github.com/paulguz261/meli_ai_challenge.git
 cd meli_ai_challenge
 
 ### 2. Crea el archivo 'agents/keys.py' con tus claves API
-#    Este archivo debe definir las siguientes variables:
-#    - API_KEY_GPT_MELI: tu clave de API de OpenAI
-#    - API_KEY_GEMINI_MELI: tu clave de API de Gemini
+Este archivo debe definir las siguientes variables:
+   - API_KEY_GPT_MELI: tu clave de API de OpenAI
+   - API_KEY_GEMINI_MELI: tu clave de API de Gemini
 
-# Contenido de ejemplo para agents/keys.py:
-# API_KEY_GPT_MELI = "tu-clave-api-openai"
-# API_KEY_GEMINI_MELI = "tu-clave-api-gemini"
+### Contenido de ejemplo para agents/keys.py:
+   - API_KEY_GPT_MELI = "tu-clave-api-openai"
+   - API_KEY_GEMINI_MELI = "tu-clave-api-gemini"
 
 ### 3. Crea y activa el entorno usando Conda
+```bash
 conda env create -f environment.yml
 conda activate meli_ai_env
+```
 
 ### 4. Inicia el servidor FastAPI
+```bash
 uvicorn app.main:app --reload
-
+```
