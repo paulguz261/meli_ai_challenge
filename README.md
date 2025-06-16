@@ -11,18 +11,22 @@ Este proyecto utiliza agentes en LangGraph y un modelo de machine learning para 
 
 ## 🏗️ Estructura del Proyecto
 
-agents/                 # 🧠 Lógica principal de los agentes usando LangGraph
-├── tools/              # Herramientas o componentes reutilizables (opcional)
-└── keys.py             # Claves API para los LLMs (debería estar en .gitignore)
+## 📁 Estructura del Proyecto
 
-app/                    # 🌐 Aplicación FastAPI que expone el agente como servicio API
+```text
+agents/                 🧠 Lógica principal de los agentes usando LangGraph
+├── tools/              Herramientas o componentes reutilizables (opcional)
+└── keys.py             Claves API para los LLMs (debería estar en .gitignore)
 
-data/                   # 📂 (Vacía) Carpeta reservada para archivos de entrada o logs de prueba
+app/                    🌐 Aplicación FastAPI que expone el agente como servicio API
 
-models/                 # 🤖 Código del modelo y exportaciones
-└── exports/            # Archivos del modelo exportado (.joblib, .pkl)
+data/                   📂 (Vacía) Carpeta reservada para archivos de entrada o logs de prueba
 
-notebooks/              # 📒 Notebooks de Jupyter para pruebas, prototipado y análisis exploratorio
+models/                 🤖 Código del modelo y exportaciones
+└── exports/            Archivos del modelo exportado (.joblib, .pkl)
+
+notebooks/              📒 Notebooks de Jupyter para pruebas, prototipado y análisis exploratorio
+```
 
 ## 🧩 Descripción del Funcionamiento
 
