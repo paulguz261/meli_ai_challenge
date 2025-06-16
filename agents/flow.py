@@ -12,7 +12,6 @@ from typing import List
 
 
 from agents.ingest_agent import predict_tool
-# from decision_agent import suggest_action
 
 # Define input/output state schema (simple key-value string map)
 from typing import TypedDict
@@ -153,7 +152,6 @@ def decision_node(state: FlowState) -> FlowState:
 
     parsed = format_decision_output(result)
 
-    # return {"decisions": result.content}
     return {"decisions": parsed}
 
 # Build the LangGraph
