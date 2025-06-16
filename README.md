@@ -34,7 +34,7 @@ La herramienta está expuesta a través de una API que recibe un lote de registr
 
 Estos registros pasan por un **flujo de agentes** que consta de dos etapas:
 
-![Flujo de Agentes](agents\agent_flow_mermaid.png)
+![Flujo de Agentes](agents/agent_flow_mermaid.png)
 
 1. **Agente de Ingesta**  
    Es el encargado de recibir los logs, validarlos, formatearlos y realizar el llamado a la herramienta (`Tool`) disponible. Esta herramienta corresponde a un modelo de Machine Learning previamente entrenado que clasifica cada registro como normal o potencialmente anómalo.
