@@ -15,9 +15,6 @@ __pycache__/
 data/*.csv
 data/*.zip
 
-# Trained model exports (you can track the model differently if needed)
-models/exports/
-
 # IDE / Editor configs
 .vscode/
 
