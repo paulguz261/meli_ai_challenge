@@ -44,6 +44,9 @@ Estos registros pasan por un **flujo de agentes** que consta de dos etapas:
 
 La estructura de la respuesta generada por el agente de decisión se describe en [📤 Ejemplo de Salida](#-ejemplo-de-salida).
 
+### Comunicacion entre agentes
+Se utiliza FlowState para definir un estado compartido entre los agentes del flujo. Esto permite que cada agente pueda leer, escribir o modificar variables comunes y así intercambiar información.
+En este caso, el agente 1 escribe en la variable predicciones, que contiene los resultados del modelo aplicado a los logs. Luego, el agente 2 accede a esa misma variable para tomar decisiones basadas en dichas predicciones.
 
 ### 📥 Ejemplo de Entrada
 
