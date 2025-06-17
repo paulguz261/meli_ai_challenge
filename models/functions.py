@@ -12,6 +12,10 @@ def read_train_data(file_path):
 
 
 class SafeLogTransformer(BaseEstimator, TransformerMixin):
+    """
+    A transformer that applies a logarithmic transformation to numeric columns in a DataFrame,
+    replacing zeros with a small epsilon value to avoid log(0) issues.
+    """
     def __init__(self, columns=None, epsilon=1e-9):
         self.columns = columns
         self.epsilon = epsilon
@@ -28,6 +32,11 @@ class SafeLogTransformer(BaseEstimator, TransformerMixin):
 
 
 class CardinalityReducer(BaseEstimator, TransformerMixin):
+    """
+    A transformer that reduces the cardinality of categorical columns in a DataFrame
+    by replacing less frequent categories with a placeholder value.
+    This is useful for handling high-cardinality categorical features in machine learning models.
+    """
     def __init__(self, top_n=5, placeholder='otros'):
         self.top_n = top_n
         self.placeholder = placeholder
@@ -46,6 +55,7 @@ class CardinalityReducer(BaseEstimator, TransformerMixin):
         return X
     
 class BasicPreprocessor(BaseEstimator, TransformerMixin):
+    """ A basic preprocessor that drops rows with any missing values and removes specified columns."""
     def fit(self, X, y=None):
         return self
     

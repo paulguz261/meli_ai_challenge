@@ -16,7 +16,11 @@ import models.config as cnf
 import models.functions as func
 
 def create_pipeline(df):
-    """Create a machine learning pipeline."""
+    """
+    Create a machine learning pipeline.
+    This function constructs a pipeline that includes preprocessing steps for both numeric and categorical features,
+    followed by a Gradient Boosting Classifier.
+    """
     
     df_clean = func.BasicPreprocessor().fit_transform(df)
 
@@ -64,6 +68,15 @@ def save_pipeline(pipeline, filename):
     print(f"Pipeline saved to {model_path}")
 
 def model_metrics(pipeline, X, y):
+    """
+    Evaluate the model's performance using various metrics.
+    This function predicts the labels for the given features and calculates accuracy, precision, recall, and F1-score.
+    It also prints a classification report and confusion matrix.
+    Args:
+        pipeline (Pipeline): The fitted machine learning pipeline.
+        X (pd.DataFrame): The features to predict.
+        y (pd.Series): The true labels.
+    """
     y_pred = pipeline.predict(X)
 
     # Calculate accuracy
@@ -91,6 +104,12 @@ def model_metrics(pipeline, X, y):
     print(classification_report(y, y_pred))
 
 def train_model():
+    """
+    Train a machine learning model using the training data.
+    This function reads the training data, splits it into training and testing sets,
+    fits a machine learning pipeline to the training data, evaluates the model's performance,
+    and saves the fitted pipeline to a file.
+    """
     df = func.read_train_data(cnf.TRAIN_DIR)
     X = df.drop(columns=["attack_cat"])
     y = df["attack_cat"]
