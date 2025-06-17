@@ -9,6 +9,9 @@ Este proyecto utiliza agentes en LangGraph y un modelo de machine learning para 
 - Agentes que coordinan predicción y toma de decisiones
 - Respuestas estructuradas con acciones sugeridas por registro
 
+## Dataset
+Para este proyecto se empleó el dataset en formato UNSW-NB15 (Dataset en Kaggle) ya que contiene múltiples registros de logs de acceso a red que reflejan distintos tipos de comportamientos. Este conjunto de datos es especialmente útil para tareas de detección de anomalías porque incluye tanto conexiones normales como conexiones marcadas como ataques, permitiendo entrenar modelos con datos etiquetados. Además, los registros de ataques están clasificados en diferentes categorías (como Exploits, Fuzzers, DoS, entre otros), lo que permite no solo identificar si una conexión es anómala, sino también entender el tipo de amenaza involucrada. Este nivel de detalle facilita el desarrollo de sistemas de detección más robustos y la implementación de agentes que puedan tomar decisiones informadas sobre acciones como alertar, bloquear o permitir el tráfico.
+
 ## 🏗️ Estructura del Proyecto
 
 ## 📁 Estructura del Proyecto
